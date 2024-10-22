@@ -41,7 +41,7 @@ nav {
 .nav__content {
   max-width: var(--max-width);
   margin: auto;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,13 +88,14 @@ ul li a {
 }
 
 ul li a:hover {
-  border-top-color: var(--secondary-color);
-  border-bottom-color: var(--secondary-color);
-  color: var(--secondary-color);
+  border-top-color: var(--primary-color-dark);
+  border-bottom-color: var(--primary-color-dark);
+  color: var(--primary-color);
 }
 
 .section {
   background-color: var(--extra-light);
+  margin-top: 40px;
 }
 
 .section__container {
@@ -137,7 +138,7 @@ ul li a:hover {
   color: var(--text-light);
   margin-bottom: 2rem;
   font-size: 1.25rem;
-  text-align: justify;
+  text-align:unset;
 }
 
 .action__btns {
@@ -227,7 +228,7 @@ ul li a:hover {
 
 /* Skill section container */
 .skills__section {
-    background-color: #f9f9f9;
+    background-color: var(--extra-light);
     padding: 2rem;
   }
   
@@ -584,4 +585,9 @@ p {
 .contact-button:hover {
   background-color: var(--primary-color-dark); /* Change this to your preferred hover color */
   transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.skills__section, .experience-section, .projects-section, #education, #contact {
+  padding-top: 80px; /* Adjust this value based on your nav height */
+  margin-top: -80px; /* Same as padding to counteract the space added */
 }
