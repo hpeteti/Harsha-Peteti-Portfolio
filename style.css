@@ -10,8 +10,8 @@
   --max-width: 1200px;
 }
 
-i{
-    color: var(--primary-color-dark);
+i {
+  color: var(--primary-color-dark);
 }
 
 * {
@@ -138,7 +138,7 @@ ul li a:hover {
   color: var(--text-light);
   margin-bottom: 2rem;
   font-size: 1.25rem;
-  text-align:unset;
+  text-align: unset;
 }
 
 .action__btns {
@@ -228,111 +228,113 @@ ul li a:hover {
 
 /* Skill section container */
 .skills__section {
-    background-color: var(--extra-light);
-    padding: 2rem;
-  }
-  
-  .skills__container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-  
-  .skills__container h2 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-size: 2.5em;
-  }
-  
-  /* Row container to align three skill boxes in one row */
+  background-color: var(--extra-light);
+  padding: 2rem;
+}
+
+.skills__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.skills__container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+}
+
+/* Row container to align three skill boxes in one row */
+.skills__row {
+  display: flex;
+  justify-content: space-between; /* Spreads the skill boxes evenly */
+  gap: 2rem; /* Adds space between skill boxes */
+  margin-bottom: 2rem; /* Adds space between rows */
+}
+
+/* Skill box for each section */
+.skill__box {
+  background-color: #ffffff;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill__box h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color-dark);
+  font-size: 1.5em;
+}
+
+/* Grid layout for skills in each section */
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows skills to wrap onto the next line if necessary */
+  gap: 0.5rem;
+}
+
+.skills__grid span {
+  font-size: 1.2em;
+}
+
+.skill__item {
+  background-color: var(--extra-light);
+  border: 1px solid var(--primary-color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--text-dark);
+  min-width: 100px; /* Ensures small boxes */
+  transition: 0.3s;
+}
+
+/* Hover effect for skill items */
+.skill__item:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 750px) {
   .skills__row {
-    display: flex;
-    justify-content: space-between; /* Spreads the skill boxes evenly */
-    gap: 2rem; /* Adds space between skill boxes */
-    margin-bottom: 2rem; /* Adds space between rows */
+    flex-direction: column; /* Stacks the skill boxes on smaller screens */
   }
-  
-  /* Skill box for each section */
+
   .skill__box {
-    background-color: #ffffff;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 2rem;
-    flex: 1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skill__box h3 {
     margin-bottom: 1rem;
-    color: var(--primary-color-dark);
-    font-size: 1.5em;
   }
-  
-  /* Grid layout for skills in each section */
+
   .skills__grid {
-    display: flex;
-    flex-wrap: wrap; /* Allows skills to wrap onto the next line if necessary */
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
-  .skills__grid span{
-    font-size: 1.2em;
-  }
-  
   .skill__item {
-    background-color: var(--extra-light);
-    border: 1px solid var(--primary-color-dark);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-align: center;
-    color: var(--text-dark);
-    min-width: 100px; /* Ensures small boxes */
-    transition: 0.3s;
+    min-width: 80px;
   }
-  
-  /* Hover effect for skill items */
-  .skill__item:hover {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 750px) {
-    .skills__row {
-      flex-direction: column; /* Stacks the skill boxes on smaller screens */
-    }
-  
-    .skill__box {
-      margin-bottom: 1rem;
-    }
-  
-    .skills__grid {
-      gap: 1rem;
-    }
-  
-    .skill__item {
-      min-width: 80px;
-    }
-  }
+}
 
-  body {
-    --primary-color: #a855f7;
-    --primary-color-dark: #9333ea;
-    --secondary-color: #ca8a04;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --extra-light: #faf5ff;
-    background-color: var();
+body {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  background-color: var();
 }
 
 /* Experience Section Styles */
 .experience-section {
   background-color: #faf5ff; /* Background color */
   padding: 50px 0;
+  font-size: 1.75em;
+  margin-bottom: 2rem;
   text-align: center;
+  color: var(--primary-color);
   justify-content: space-between;
-
 }
 
 .timeline {
@@ -414,26 +416,25 @@ p {
 /* Optional: Responsive design */
 @media (max-width: 768px) {
   .timeline-item {
-      width: 100%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
   }
 
   h3 {
-      font-size: 20px; /* Adjust title font size for smaller screens */
+    font-size: 20px; /* Adjust title font size for smaller screens */
   }
 
   h4 {
-      font-size: 16px; /* Adjust company name font size for smaller screens */
+    font-size: 16px; /* Adjust company name font size for smaller screens */
   }
 
   .date {
-      font-size: 12px; /* Adjust duration font size for smaller screens */
+    font-size: 12px; /* Adjust duration font size for smaller screens */
   }
 
   p {
-      font-size: 14px; /* Adjust description font size for smaller screens */
+    font-size: 14px; /* Adjust description font size for smaller screens */
   }
 }
-
 
 .projects-section {
   /* background-color: #f0f0f0; Same as your skills and home section */
@@ -443,8 +444,10 @@ p {
 }
 
 .projects-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color);
 }
 
 .projects-container {
@@ -558,7 +561,6 @@ p {
   transform: translateY(-2px); /* Lift effect on hover */
 }
 
-
 #contact {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -583,11 +585,17 @@ p {
 }
 
 .contact-button:hover {
-  background-color: var(--primary-color-dark); /* Change this to your preferred hover color */
+  background-color: var(
+    --primary-color-dark
+  ); /* Change this to your preferred hover color */
   transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.skills__section, .experience-section, .projects-section, #education, #contact {
+.skills__section,
+.experience-section,
+.projects-section,
+#education,
+#contact {
   padding-top: 80px; /* Adjust this value based on your nav height */
   margin-top: -80px; /* Same as padding to counteract the space added */
 }
