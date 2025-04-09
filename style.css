@@ -50,8 +50,8 @@ nav {
 nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
-  color: rgb(134, 8, 8);
-  /* color: var(--primary-color); */
+  /* color: rgb(134, 8, 8); */
+  color: var(--primary-color);
   transition: 0.3s;
 }
 nav .logo a:hover {
@@ -124,10 +124,16 @@ ul li a:hover {
 
 .title {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 3rem;
   color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.job{
   margin-bottom: 1rem;
+  font-weight: 400;
+  color: rgb(32, 31, 31);
 }
 
 .title span {
@@ -139,7 +145,7 @@ ul li a:hover {
   color: var(--text-light);
   margin-bottom: 2rem;
   font-size: 1.25rem;
-  text-align: unset;
+  text-align: justify;
 }
 
 .action__btns {
@@ -357,9 +363,9 @@ body {
 }
 
 .icon img {
-  width: 50px; /* Icon image width */
+  width: 70px; /* Icon image width */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Circular image */
+  border-radius: 100%; /* Circular image */
 }
 
 .timeline-content {
